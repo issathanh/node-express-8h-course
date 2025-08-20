@@ -1,5 +1,6 @@
 //Destructuring method out of the fs module 
 const { readFile, writeFile } = require('fs')
+console.log('start')
 //expect 3 paramter (path, encoding, calls back with error and result parameter)
 readFile('./content/first.txt', 'utf8', (error, result) => {
     if (error) {
@@ -20,8 +21,11 @@ readFile('./content/first.txt', 'utf8', (error, result) => {
                     console.log(err)
                     return;
                 }
-                console.log(result)
+                console.log('done with this task')
+                
             }
         )
     })
 })
+
+console.log('starting next task')

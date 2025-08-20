@@ -1,6 +1,6 @@
 //Destructuring method out of the fs module 
 const  {readFileSync, writeFileSync} = require('fs')
-
+console.log('start')
 //read file synce require 2 param(path, encoding)
 
 const first = readFileSync('./content/first.txt','utf8')
@@ -12,3 +12,6 @@ writeFileSync('./content/result.txt',
     `result: ${first}, ${second}`,
     {flag: 'a'}//appending to previous
 )
+
+console.log('done with this task')
+console.log('starting the next task')

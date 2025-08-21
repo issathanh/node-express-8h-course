@@ -1,0 +1,24 @@
+{
+  "name": "express-8h-course",
+  "version": "1.0.0",
+  "main": "-intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/issathanh/node-express-8h-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/issathanh/node-express-8h-course/issues"
+  },
+  "homepage": "https://github.com/issathanh/node-express-8h-course#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,27 @@
+const EventEmitter = require('events')
+
+
+const customEmitter = new EventEmitter()
+
+customEmitter.on('response', (name, age) => {
+    console.log(`hi ${name}, you are ${age} years old`)
+})
+customEmitter.on('response', (name, age) => {
+    console.log(`hi ${name} 2, you are ${age} years old 2`)
+})
+customEmitter.emit('response', 'john', 34)
+
+const http = require('http')
+
+// const server = http.createServer((req, res)=>{
+//     res.end('Welcome')
+// })
+
+//Using Event Emitter API
+const server = http.createServer()
+
+server.on('request', (req, res) => {
+    res.end('Welcome')
+})
+
+server.listen(5000) 

@@ -1,0 +1,14 @@
+//read stream option for when the file is too big to fit in a variable 
+const { createReadStream } = require('fs')
+
+const stream = createReadStream('./content/big.txt')
+// const stream = createReadStream('./content/big.txt',{highWaterMark:90000}, 'encoding:'utf8',)
+
+stream.on('data', (result) => {
+    console.log(result)
+})
+//now were reading data in chunmks and by default that chunks in 64 kilobyte
+
+stream.on('error', (err) => {
+    console.log(err)
+})
